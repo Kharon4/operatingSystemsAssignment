@@ -61,9 +61,6 @@ int main(){
         if(strcmp(command,"exit")==0){      // for the command exit we are breaking the loop and ending the program
             break;
         }
-        if(strcmp(command,"clearscreen")==0){
-            typ_prmpt();
-        }
     }
     return 0;
 }
