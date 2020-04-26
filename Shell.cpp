@@ -34,7 +34,7 @@ void rd_cmd(char prm[],char *par[] ){
         arr[i++] = strdup(parse);
         parse = strtok(NULL," \n");
     }
-    strcpy(cmd,arr[0]);
+    strcpy(prm,arr[0]);
     for(j=0;j<i;j++){
         par[j] = arr[j];
         par[i] = NULL;//teminate the list of parameter
