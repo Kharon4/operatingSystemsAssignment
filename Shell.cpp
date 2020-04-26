@@ -56,7 +56,7 @@ int main(){
         else{
             strcpy(cmd,"/bin/");         
             strncat(cmd,command);          //copying
-            execv(given,parameters,env);
+            execv(cmd,parameters,env);
         }
         if(strcmp(command,"exit")==0){      // for the command exit we are breaking the loop and ending the program
             break;
