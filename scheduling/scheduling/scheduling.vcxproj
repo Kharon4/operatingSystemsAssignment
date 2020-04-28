@@ -151,6 +151,18 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="main.cpp" />
+    <ClCompile Include="src\loader.cpp" />
+    <ClCompile Include="src\processManager.cpp" />
+    <ClCompile Include="src\scheduler.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="headers\loader.h" />
+    <ClInclude Include="headers\process.h" />
+    <ClInclude Include="headers\processManager.h" />
+    <ClInclude Include="headers\scheduler.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <Text Include="processData.txt" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
