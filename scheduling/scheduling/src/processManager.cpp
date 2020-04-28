@@ -12,8 +12,15 @@ void processManager::update() {
 		//subtract from its burst Time
 		readylist[currentExecutingId].burstTime--;
 		if (readylist[currentExecutingId].burstTime == 0) {
+			//add to completed process list
+			completedProcess p;
+			p.P = readylist[currentExecutingId];
+			p.turnArroundTime = currentTime - p.P.arrivalTime;
+			p.waitTime = p.turnArroundTime - p.P.originalBurstTime;
+			completedProcessList.push_back(p);
 			//remove from ready list
-			readylist[currentExecutingId] = readylist[readylist.size() - 1];
+			for(long long i = currentExecutingId ; i < readylist.size()-1 ; ++i)
+			readylist[i] = readylist[i + 1];
 			readylist.pop_back();
 		}
 	}

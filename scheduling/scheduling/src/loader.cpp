@@ -17,6 +17,7 @@ bool loadData(std::string filename, std::vector<process>& OUTvec) {
 		if (!file.eof())file >> val.arrivalTime;
 		if (!file.eof())file >> val.burstTime;
 		if (!file.eof())file >> val.priorityNo;
+		val.originalBurstTime = val.burstTime;
 		OUTvec.push_back(val);
 	}
 	return false;

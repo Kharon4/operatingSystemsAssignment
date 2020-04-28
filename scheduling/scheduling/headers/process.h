@@ -8,6 +8,7 @@ public:
 	size_t arrivalTime;
 	size_t burstTime;
 	size_t priorityNo;
+	size_t originalBurstTime;
 	void displayProcess() { 
 		std::cout << 
 		"process : " << processId <<
