@@ -28,3 +28,11 @@ private:
 public:
 	long long int getRunningID(std::vector<process>& readyList);
 };
+
+class priorityNPscheduler : public scheduler {
+private:
+	size_t burstsLeft = 0;
+	long long int chosen = -1;
+public:
+	long long int getRunningID(std::vector<process>& readyList);
+};

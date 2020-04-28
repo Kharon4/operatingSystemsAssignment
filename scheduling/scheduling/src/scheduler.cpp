@@ -45,3 +45,24 @@ long long int SJFNPscheduler::getRunningID(std::vector<process>& readyList) {
 	chosen = rVal;
 	return rVal;
 }
+
+
+long long int priorityNPscheduler::getRunningID(std::vector<process>& readyList) {
+	if (burstsLeft != 0)burstsLeft--;
+	if (burstsLeft > 0) {
+		return chosen;
+	}
+	//assuming the process manager implementation can change
+	long long rVal = -1;
+	size_t largestPriority = 0;
+	for (long long i = 0; i < readyList.size(); ++i) {
+		if (readyList[i].priorityNo > largestPriority || rVal < 0) {
+			largestPriority = readyList[i].priorityNo;
+			rVal = i;
+		}
+	}
+	if(rVal!=-1)
+	burstsLeft =readyList[rVal].burstTime;
+	chosen = rVal;
+	return rVal;
+}
