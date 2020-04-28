@@ -3,7 +3,8 @@
 #include "loader.h"
 
 int main() {
-	FCFSscheduler sc;
+	//FCFSscheduler sc;
+	SJFNPscheduler sc;
 	processManager PM(&sc);
 	if (loadData("processData.txt", PM.processList))std::cout << "Failed to load the data \n";
 

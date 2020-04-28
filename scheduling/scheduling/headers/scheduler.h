@@ -15,3 +15,16 @@ public:
 	long long int getRunningID(std::vector<process>& readyList);
 
 };
+
+class SJFPscheduler : public scheduler {
+public:
+	long long int getRunningID(std::vector<process>& readyList);
+};
+
+class SJFNPscheduler : public scheduler {
+private:
+	size_t burstsLeft = 0;
+	long long int chosen = -1;
+public:
+	long long int getRunningID(std::vector<process>& readyList);
+};

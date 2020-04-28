@@ -19,4 +19,5 @@ bool loadData(std::string filename, std::vector<process>& OUTvec) {
 		if (!file.eof())file >> val.priorityNo;
 		OUTvec.push_back(val);
 	}
+	return false;
 }
