@@ -4,7 +4,7 @@
 
 int main() {
 	//FCFSscheduler sc;
-	priorityNPscheduler sc;
+	roundRobinscheduler sc;
 	processManager PM(&sc);
 	if (loadData("processData.txt", PM.processList))std::cout << "Failed to load the data \n";
 
